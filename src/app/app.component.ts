@@ -10,10 +10,12 @@ export class AppComponent {
   inputHint = 'What needs to be done?';
   colspan = 2;
   todos = [];
+  todo = '';
 
-  addTodo(element: HTMLInputElement) {
-    if (element.value) {
-      this.todos.push(element.value)
+  addTodo() {
+    if (this.todo) {
+      this.todos.push(this.todo);
+      this.todo = '';
     }
   }
 
