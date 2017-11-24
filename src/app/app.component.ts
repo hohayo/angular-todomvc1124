@@ -12,7 +12,9 @@ export class AppComponent {
   todos = [];
 
   addTodo(element: HTMLInputElement) {
-    this.todos.push(element.value)
+    if (element.value) {
+      this.todos.push(element.value)
+    }
   }
 
 }
